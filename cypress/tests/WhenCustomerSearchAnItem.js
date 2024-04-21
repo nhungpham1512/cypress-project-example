@@ -1,12 +1,12 @@
 import Search from "../tasks/Search";
 import Login from "../tasks/Login";
-import Items from "../entities/Items";
+import Item from "../entities/Item";
 
 
 let login = new Login()
 let search = new Search()
 const shopName = "filon asset store";
-let itemA = new Items("Gaming Desktop");
+let itemA = new Item("Gaming Desktop");
 
 
 describe('when search an item in a detailed shop', () => {
@@ -14,7 +14,7 @@ describe('when search an item in a detailed shop', () => {
         cy.visit("/")
         login.loginAsCustomer();
         search.searchAShop(shopName); 
-        search.searchAnItem(itemA.getItemName());
+        search.searchAnItem(itemA);
         cy.xpath('//li[contains(text(),"All Categories")]/parent::ul/following-sibling::div//h1')
         .then($tittle=>{
             let tittle ='';

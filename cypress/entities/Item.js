@@ -1,11 +1,10 @@
-class Items {
-   itemName;
-   
-
-  constructor(itemName) {
+class Item {
+ 
+  constructor(itemName, itemQuantity, itemPrice) {
       this._itemName = itemName;
+      this._itemQuantity = itemQuantity;
+      this._itemPrice = itemPrice;
   }
-
 
   // Phương thức getter cho thuộc tính itemName
    getItemName() {
@@ -16,6 +15,10 @@ class Items {
     return this._itemQuantity;
 }
 
+    getItemPrice(){
+        return this._itemPrice
+    }
+
   // Phương thức setter cho thuộc tính itemName
   set setItemName(newItemName) {
       this._itemName = newItemName;
@@ -24,6 +27,9 @@ class Items {
   set setItemQuantity(newItemQuantity) {
     this._itemQuantity = newItemQuantity;
 }
+    setItemPrice(newItemPrice){
+        this._itemPrice = newItemPrice;
+    }
   
 }
-module.exports= Items;
+module.exports= Item;

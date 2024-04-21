@@ -7,5 +7,6 @@ module.exports = defineConfig({
     },
     specPattern:"./cypress/tests/**.*",
     baseUrl:"https://demo.activeitzone.com/ecommerce"
+    
   },
 });

@@ -10,7 +10,7 @@ class Buy{
         cy.wait(3000);
         cy.xpath(productUserUI.PROCESSTOCHECKOUT_BTN).click();
         cy.wait(3000);
-        cy.xpath('//a[contains(text(),"Continue to Shipping")]').click();
+        //cy.xpath('//a[contains(text(),"Continue to Shipping")]').click();
         //cy.xpath('//button[contains(text(),"Continue to Delivery Info")]').click();
         //cy.xpath('//button[contains(text(),"Continue to Payment")]').click();
 
